@@ -15,13 +15,13 @@ import { MusicPlayer } from "@/components/wedding/MusicPlayer";
 import { invitation } from "@/config/invitation";
 
 const { couple, event, venue, meta } = invitation;
-const title = meta?.title ?? `${couple.brideShort} & ${couple.groomShort} — 1st Anniversary Invitation`;
+const title = meta?.title ?? `${couple.groomShort} & ${couple.brideShort} — 1st Anniversary Invitation`;
 const description =
   meta?.description ??
-  `${couple.bride} and ${couple.groom} invite you to celebrate their 1st Marriage Anniversary on ${event.dateLabel} at ${venue.name}, ${venue.address}.`;
+  `${couple.groom} and ${couple.bride} invite you to celebrate their 1st Wedding Anniversary on ${event.dateLabel} at ${venue.name}, ${venue.address}.`;
 const ogUrl = meta?.url ?? "/";
 const ogImage = meta?.image ?? "https://media.invitestory.in/sage-parchment/og-image.jpg";
-const siteName = meta?.siteName ?? `${couple.brideShort} & ${couple.groomShort} 1st Anniversary`;
+const siteName = meta?.siteName ?? `${couple.groomShort} & ${couple.brideShort} 1st Anniversary`;
 
 export const Route = createFileRoute("/")({
   head: () => ({

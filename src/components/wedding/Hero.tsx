@@ -1,7 +1,6 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 const heroArch = "https://media.invitestory.in/sage-parchment/src/assets/hero-arch.jpg";
-import boundByPyar from "@/assets/bound-by-pyar.png";
 import { invitation } from "@/config/invitation";
 import { AuroraBackdrop } from "./AuroraBackdrop";
 import { useOpened } from "./OpenGate";
@@ -34,8 +33,8 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-pine/25 via-transparent via-40% to-parchment" />
       </motion.div>
 
-      {/* Fixed bottom gradient to guarantee seamless transition to next section */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-72 bg-gradient-to-t from-parchment via-parchment/95 via-60% to-transparent" />
+      {/* Smooth bottom parchment gradient guaranteeing seamless transition and text clarity */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[68vh] bg-gradient-to-t from-parchment via-parchment/95 via-45% to-transparent" />
 
       <motion.div
         style={{ y: textY }}
@@ -45,7 +44,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 14 }}
           animate={opened ? { opacity: 1, y: 0 } : false}
           transition={{ duration: 1, delay: 0.2 }}
-          className="font-serif text-sm tracking-[0.18em] text-gold sm:text-base"
+          className="font-serif text-sm tracking-[0.18em] text-pine font-medium drop-shadow-[0_1px_3px_rgba(255,255,255,0.9)] sm:text-base"
         >
           {invite.shlok}
         </motion.p>
@@ -54,7 +53,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={opened ? { opacity: 1, y: 0 } : false}
           transition={{ duration: 1, delay: 0.3 }}
-          className="mt-3 text-[0.68rem] tracking-[0.38em] text-ink/75 uppercase"
+          className="mt-3 text-[0.72rem] font-semibold tracking-[0.32em] text-pine/90 uppercase drop-shadow-[0_1px_3px_rgba(255,255,255,0.9)] sm:text-xs"
         >
           {invite.kicker}
         </motion.p>
@@ -63,7 +62,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={opened ? { opacity: 1 } : false}
           transition={{ duration: 1, delay: 0.4 }}
-          className="mt-2 text-xs text-ink/70"
+          className="mx-auto mt-2.5 max-w-md font-display text-base italic tracking-wide text-ink font-medium leading-relaxed drop-shadow-[0_1px_3px_rgba(255,255,255,0.9)] sm:text-lg"
         >
           {invite.line}
         </motion.p>
@@ -74,24 +73,22 @@ export function Hero() {
           transition={{ duration: 1.4, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="mx-auto mt-4 max-w-lg text-4xl leading-tight font-light text-pine uppercase sm:text-5xl"
         >
-          {couple.brideShort}
+          {couple.groomShort}
           <span className="mx-3 inline-block font-display text-2xl lowercase italic text-pine/70">
             and
           </span>
-          {couple.groomShort}
+          {couple.brideShort}
         </motion.h1>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={opened ? { opacity: 1, scale: 1 } : false}
+          initial={{ opacity: 0, y: 10 }}
+          animate={opened ? { opacity: 1, y: 0 } : false}
           transition={{ duration: 1.2, delay: 0.7 }}
-          className="mx-auto mt-3 max-w-[260px] sm:max-w-[300px]"
+          className="mx-auto mt-3 flex items-center justify-center gap-2 font-serif text-sm tracking-[0.15em] text-pine font-medium sm:text-base"
         >
-          <img
-            src={boundByPyar}
-            alt="Bound by प्यार, Blessed with साथ"
-            className="w-full object-contain mix-blend-multiply opacity-95"
-          />
+          <span>Bound by प्यार</span>
+          <span className="text-gold">•</span>
+          <span>Blessed with साथ</span>
         </motion.div>
 
         <motion.div
@@ -105,7 +102,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={opened ? { opacity: 1 } : false}
           transition={{ duration: 1, delay: 1 }}
-          className="mt-5 text-[0.68rem] tracking-[0.32em] text-gold uppercase"
+          className="mt-5 text-[0.68rem] tracking-[0.32em] text-gold uppercase font-medium sm:text-xs"
         >
           {invite.occasion}
         </motion.p>
@@ -114,7 +111,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={opened ? { opacity: 1 } : false}
           transition={{ duration: 1, delay: 1.15 }}
-          className="mt-2 font-display text-3xl tracking-[0.18em] text-pine"
+          className="mt-2 font-display text-3xl tracking-[0.18em] text-pine sm:text-4xl"
         >
           {event.dateLabel}
         </motion.p>

@@ -13,7 +13,22 @@ export function MusicPlayer() {
   const musicUrl = "music" in invitation ? invitation.music.url : "/music.mp3";
   const musicTitle = "music" in invitation ? invitation.music.title : "Background Music";
 
-  // Try to play when the gate opens
+  // Listen to direct user tap on "Open the invitation"
+  useEffect(() => {
+    const handleTrigger = () => {
+      setHasInteracted(true);
+      if (audioRef.current && audioAvailable) {
+        audioRef.current
+          .play()
+          .then(() => setIsPlaying(true))
+          .catch(() => setIsPlaying(false));
+      }
+    };
+    window.addEventListener("play-invitation-music", handleTrigger);
+    return () => window.removeEventListener("play-invitation-music", handleTrigger);
+  }, [audioAvailable]);
+
+  // Fallback try to play when the gate opens
   useEffect(() => {
     if (opened && !hasInteracted && audioRef.current && audioAvailable) {
       audioRef.current

@@ -87,10 +87,10 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
           transition={{ duration: 1, delay: 0.2 }}
           className="flex flex-col items-center gap-2"
         >
-          <p className="font-serif text-base tracking-[0.15em] text-gold sm:text-lg">
+          <p className="font-serif text-base tracking-[0.15em] text-gold drop-shadow-md sm:text-lg">
             {invite.shlok}
           </p>
-          <p className="text-[0.65rem] tracking-[0.28em] text-parchment/80">
+          <p className="text-[0.68rem] tracking-[0.28em] text-parchment/90 drop-shadow">
             {invite.tagline}
           </p>
         </motion.div>
@@ -99,7 +99,7 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.35 }}
-          className="mt-5 text-[0.6rem] tracking-[0.35em] text-gold/90 uppercase"
+          className="mt-5 text-[0.72rem] font-semibold tracking-[0.24em] text-parchment uppercase drop-shadow-[0_2px_5px_rgba(0,0,0,0.9)] sm:text-xs"
         >
           {invite.kicker}
         </motion.p>
@@ -114,7 +114,7 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
             initial={{ scale: 0.7, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.15, ease: EASE }}
-            className="absolute inset-4 rounded-full border border-gold/70 bg-parchment/8 backdrop-blur-[2px]"
+            className="absolute inset-4 rounded-full border border-gold/70 bg-parchment/10 backdrop-blur-[2px]"
           />
           <motion.span
             animate={{ scale: [1, 1.16, 1], opacity: [0.35, 0, 0.35] }}
@@ -125,11 +125,11 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.4, delay: 0.5 }}
-            className="relative font-display text-4xl tracking-[0.08em] text-parchment"
+            className="relative font-display text-4xl tracking-[0.08em] text-parchment drop-shadow-md"
           >
-            {couple.brideShort[0]}
-            <span className="mx-1 text-gold">&</span>
             {couple.groomShort[0]}
+            <span className="mx-1 text-gold">&</span>
+            {couple.brideShort[0]}
           </motion.span>
         </div>
 
@@ -137,16 +137,16 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
           initial={{ opacity: 0, y: 16, letterSpacing: "0.5em" }}
           animate={{ opacity: 1, y: 0, letterSpacing: "0.22em" }}
           transition={{ duration: 1.5, delay: 0.6, ease: EASE }}
-          className="mt-6 text-lg font-light text-parchment uppercase sm:text-2xl"
+          className="mt-6 text-xl font-light text-parchment uppercase drop-shadow-md sm:text-2xl"
         >
-          {couple.brideShort} &amp; {couple.groomShort}
+          {couple.groomShort} &amp; {couple.brideShort}
         </motion.h2>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.75 }}
-          className="mt-1 text-[0.62rem] tracking-[0.32em] text-gold uppercase"
+          className="mt-2 text-[0.72rem] font-medium tracking-[0.28em] text-gold-soft uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] sm:text-xs"
         >
           {invite.occasion}
         </motion.p>
@@ -155,24 +155,27 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.9 }}
-          className="mt-3 font-display text-base tracking-[0.3em] text-parchment/90"
+          className="mt-3 font-display text-base tracking-[0.3em] text-parchment/95 drop-shadow-sm"
         >
           {event.dateLabel}
         </motion.p>
 
         <motion.button
           type="button"
-          onClick={onOpen}
+          onClick={() => {
+            window.dispatchEvent(new CustomEvent("play-invitation-music"));
+            onOpen();
+          }}
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.2 }}
           whileTap={{ scale: 0.96 }}
-          className="group relative mt-12 overflow-hidden rounded-full border border-gold/70 px-9 py-3.5 text-[0.62rem] tracking-[0.35em] text-parchment uppercase transition-colors hover:bg-gold/15"
+          className="group relative mt-10 overflow-hidden rounded-full border border-gold/75 bg-gold/10 px-9 py-3.5 text-[0.62rem] tracking-[0.35em] text-parchment uppercase backdrop-blur-sm transition-colors hover:bg-gold/25"
         >
           <motion.span
             animate={{ x: ["-120%", "120%"] }}
             transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }}
-            className="absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-parchment/25 to-transparent"
+            className="absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-parchment/30 to-transparent"
           />
           <span className="relative">Open the invitation</span>
         </motion.button>

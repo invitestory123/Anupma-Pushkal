@@ -5,11 +5,11 @@
 
 export const invitation = {
   couple: {
-    bride: "Anupma Gupta",
-    brideShort: "Anupma",
     groom: "Pushkal Jaiswal",
     groomShort: "Pushkal",
-    hashtag: "#AnupmaAndPushkal",
+    bride: "Anupma Gupta",
+    brideShort: "Anupma",
+    hashtag: "#PushkalAndAnupma",
     parents: {
       father: "Chandra Deo Jaiswal",
       mother: "Shashi Lata Jaiswal",
@@ -20,16 +20,16 @@ export const invitation = {
     shlok: "ॐ नमः पार्वती पतये हर हर महादेव",
     tagline: "Bound by प्यार • Blessed with साथ",
     kicker: "Mrs. Shashi Lata Jaiswal & Mr. Chandra Deo Jaiswal",
-    line: "cordially invite you to celebrate the 1st Marriage Anniversary of their beloved",
-    occasion: "1st Marriage Anniversary Celebration",
+    line: "cordially invite you to celebrate the 1st Wedding Anniversary of their beloved",
+    occasion: "1st Wedding Anniversary Celebration",
   },
   event: {
-    title: "1st Marriage Anniversary of Anupma & Pushkal",
+    title: "1st Wedding Anniversary of Pushkal & Anupma",
     /** ISO with timezone offset — India Standard Time */
-    startsAt: "2026-11-28T19:00:00+05:30",
-    endsAt: "2026-11-28T23:30:00+05:30",
-    dateLabel: "28 . 11 . 2026",
-    dayLabel: "Saturday",
+    startsAt: "2026-11-18T19:00:00+05:30",
+    endsAt: "2026-11-18T23:30:00+05:30",
+    dateLabel: "18 . 11 . 2026",
+    dayLabel: "Wednesday",
     timeLabel: "07:00 in the evening",
     dressCode: "Traditional / Festive Indian Attire",
     note: "Dinner, music, and celebrations to follow",
@@ -43,6 +43,7 @@ export const invitation = {
     url: "https://maps.app.goo.gl/koSj9mkvguHVybNNA?g_st=ac",
     lat: 26.7915,
     lng: 80.8974,
+    directionsNote: "5th Floor, VIP Road, LDA Colony, Lucknow • Valet parking available",
   },
   story: [
     {
@@ -88,17 +89,17 @@ export const invitation = {
     ],
   },
   music: {
-    title: "Celebration Melody",
+    title: "Aaj Se Teri (Pad Man)",
     url: "/music.mp3",
     autoPlay: true,
   },
   meta: {
-    title: "Anupma & Pushkal — 1st Marriage Anniversary Celebration",
+    title: "Pushkal & Anupma — 1st Wedding Anniversary Celebration",
     description:
-      "Mrs. Shashi Lata Jaiswal & Mr. Chandra Deo Jaiswal cordially invite you to celebrate the 1st Marriage Anniversary of Anupma & Pushkal at Sky Hilton Banquet and Restaurant, Lucknow.",
+      "Mrs. Shashi Lata Jaiswal & Mr. Chandra Deo Jaiswal cordially invite you to celebrate the 1st Wedding Anniversary of Pushkal & Anupma at Sky Hilton Banquet and Restaurant, Lucknow.",
     url: "https://maps.app.goo.gl/koSj9mkvguHVybNNA?g_st=ac",
     image: "https://media.invitestory.in/sage-parchment/og-image.jpg",
-    siteName: "Anupma & Pushkal 1st Anniversary",
+    siteName: "Pushkal & Anupma 1st Wedding Anniversary",
   },
 } as const;
 

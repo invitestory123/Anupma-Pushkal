@@ -25,7 +25,7 @@ export function SiteFooter() {
 
       <Reveal className="px-6">
         <p className="font-display text-3xl tracking-[0.16em] text-pine uppercase">
-          {couple.brideShort} <span className="text-gold">&</span> {couple.groomShort}
+          {couple.groomShort} <span className="text-gold">&</span> {couple.brideShort}
         </p>
         <div className="mx-auto mt-5 w-24 gold-rule" />
         <p className="mt-6 text-sm text-ink/80">{footer.families}</p>
