@@ -36,14 +36,14 @@ export function Hero() {
       {/* Smooth bottom parchment gradient guaranteeing seamless transition and text clarity */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[68vh] bg-gradient-to-t from-parchment via-parchment/95 via-45% to-transparent" />
 
-      {/* Shlok placed gracefully above the couple's head */}
+      {/* Shlok placed gracefully inside the arch above the couple */}
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={opened ? { opacity: 1, y: 0 } : false}
         transition={{ duration: 1, delay: 0.25 }}
-        className="relative z-20 w-full px-6 pt-8 text-center sm:pt-12"
+        className="relative z-20 w-full px-6 pt-28 text-center sm:pt-32"
       >
-        <p className="font-serif text-sm tracking-[0.18em] text-pine font-semibold drop-shadow-[0_1px_4px_rgba(255,255,255,0.95)] sm:text-base">
+        <p className="font-serif text-xs tracking-[0.16em] text-pine font-semibold drop-shadow-[0_1px_4px_rgba(255,255,255,0.95)] sm:text-sm sm:tracking-[0.18em] md:text-base">
           {invite.shlok}
         </p>
       </motion.div>
