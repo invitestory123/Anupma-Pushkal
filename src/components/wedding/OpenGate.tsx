@@ -79,32 +79,34 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
       <motion.div
         animate={{ opacity: opened ? 0 : 1, scale: opened ? 1.14 : 1 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
-        className="absolute inset-0 flex flex-col items-center justify-center px-8 text-center"
+        className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center"
       >
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="flex flex-col items-center gap-2"
+          className="flex flex-col items-center gap-1.5"
         >
-          <p className="font-serif text-base tracking-[0.15em] text-gold drop-shadow-md sm:text-lg">
+          <p className="font-serif text-base tracking-[0.15em] text-gold drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)] sm:text-lg">
             {invite.shlok}
           </p>
-          <p className="text-[0.68rem] tracking-[0.28em] text-parchment/90 drop-shadow">
+          <p className="text-[0.68rem] tracking-[0.28em] text-parchment/90 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
             {invite.tagline}
           </p>
         </motion.div>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.35 }}
-          className="mt-5 text-[0.72rem] font-semibold tracking-[0.24em] text-parchment uppercase drop-shadow-[0_2px_5px_rgba(0,0,0,0.9)] sm:text-xs"
+          className="mt-3.5 flex flex-col items-center gap-0.5 text-[0.72rem] font-semibold tracking-[0.22em] text-parchment uppercase drop-shadow-[0_2px_5px_rgba(0,0,0,0.95)] sm:text-xs"
         >
-          {invite.kicker}
-        </motion.p>
+          <span>Mrs. Shashi Lata Jaiswal</span>
+          <span className="font-display text-sm lowercase italic text-gold drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">&</span>
+          <span>Mr. Chandra Deo Jaiswal</span>
+        </motion.div>
 
-        <div className="relative mt-6 flex h-36 w-36 items-center justify-center sm:h-40 sm:w-40">
+        <div className="relative mt-4 flex h-28 w-28 items-center justify-center sm:h-32 sm:w-32">
           <motion.span
             animate={{ rotate: 360 }}
             transition={{ duration: 46, repeat: Infinity, ease: "linear" }}
@@ -114,18 +116,18 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
             initial={{ scale: 0.7, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.15, ease: EASE }}
-            className="absolute inset-4 rounded-full border border-gold/70 bg-parchment/10 backdrop-blur-[2px]"
+            className="absolute inset-3 rounded-full border border-gold/70 bg-parchment/10 backdrop-blur-[2px]"
           />
           <motion.span
             animate={{ scale: [1, 1.16, 1], opacity: [0.35, 0, 0.35] }}
             transition={{ duration: 3.4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute inset-4 rounded-full border border-gold"
+            className="absolute inset-3 rounded-full border border-gold"
           />
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.4, delay: 0.5 }}
-            className="relative font-display text-4xl tracking-[0.08em] text-parchment drop-shadow-md"
+            className="relative font-display text-3xl tracking-[0.08em] text-parchment drop-shadow-md sm:text-4xl"
           >
             {couple.groomShort[0]}
             <span className="mx-1 text-gold">&</span>
@@ -137,7 +139,7 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
           initial={{ opacity: 0, y: 16, letterSpacing: "0.5em" }}
           animate={{ opacity: 1, y: 0, letterSpacing: "0.22em" }}
           transition={{ duration: 1.5, delay: 0.6, ease: EASE }}
-          className="mt-6 text-xl font-light text-parchment uppercase drop-shadow-md sm:text-2xl"
+          className="mt-4 text-lg font-light text-parchment uppercase drop-shadow-md sm:text-xl"
         >
           {couple.groomShort} &amp; {couple.brideShort}
         </motion.h2>
@@ -146,7 +148,7 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.75 }}
-          className="mt-2 text-[0.72rem] font-medium tracking-[0.28em] text-gold-soft uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] sm:text-xs"
+          className="mt-1.5 text-[0.7rem] font-medium tracking-[0.26em] text-gold-soft uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)] sm:text-xs"
         >
           {invite.occasion}
         </motion.p>
@@ -155,7 +157,7 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.9 }}
-          className="mt-3 font-display text-base tracking-[0.3em] text-parchment/95 drop-shadow-sm"
+          className="mt-2 font-display text-sm tracking-[0.28em] text-parchment/95 drop-shadow-sm sm:text-base"
         >
           {event.dateLabel}
         </motion.p>
@@ -170,7 +172,7 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.2 }}
           whileTap={{ scale: 0.96 }}
-          className="group relative mt-10 overflow-hidden rounded-full border border-gold/75 bg-gold/10 px-9 py-3.5 text-[0.62rem] tracking-[0.35em] text-parchment uppercase backdrop-blur-sm transition-colors hover:bg-gold/25"
+          className="group relative mt-5 overflow-hidden rounded-full border border-gold/75 bg-gold/10 px-8 py-3 text-[0.62rem] tracking-[0.32em] text-parchment uppercase backdrop-blur-sm transition-colors hover:bg-gold/25 sm:mt-6"
         >
           <motion.span
             animate={{ x: ["-120%", "120%"] }}

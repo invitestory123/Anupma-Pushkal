@@ -9,10 +9,10 @@ export const invitation = {
     groomShort: "Pushkal",
     bride: "Anupma Gupta",
     brideShort: "Anupma",
-    hashtag: "#PushkalAndAnupma",
+    hashtag: "#Pushkal&Anupma",
     parents: {
-      father: "Chandra Deo Jaiswal",
       mother: "Shashi Lata Jaiswal",
+      father: "Chandra Deo Jaiswal",
     },
     brother: "Pranjal Jaiswal",
   },
@@ -21,7 +21,7 @@ export const invitation = {
     tagline: "Bound by प्यार • Blessed with साथ",
     kicker: "Mrs. Shashi Lata Jaiswal & Mr. Chandra Deo Jaiswal",
     line: "cordially invite you to celebrate the 1st Wedding Anniversary of their beloved",
-    occasion: "1st Wedding Anniversary Celebration",
+    occasion: "1st Wedding Anniversary",
   },
   event: {
     title: "1st Wedding Anniversary of Pushkal & Anupma",
@@ -67,14 +67,14 @@ export const invitation = {
   ],
   blessing: {
     shlok: "ॐ नमः पार्वती पतये हर हर महादेव",
-    line: "May divine blessings always illuminate your path with boundless love, peace, and eternal togetherness.",
+    line: "May divine blessings always shower the couple with boundless love, everlasting happiness, peace, and togetherness",
     translation:
-      "Bound by प्यार, Blessed with साथ — Celebrating our 1st year of love, companionship, and cherished togetherness.",
-    source: "With warm blessings from Chandra Deo Jaiswal & Shashi Lata Jaiswal",
+      "Bound by प्यार, Blessed with साथ — Celebrating 1st year of love, companionship, and cherished togetherness.",
+    source: "With warm blessings from Shashi Lata Jaiswal & Chandra Deo Jaiswal",
   },
   footer: {
     families:
-      "With best compliments & warm wishes from Chandra Deo Jaiswal, Shashi Lata Jaiswal & Pranjal Jaiswal",
+      "With best compliments & warm wishes from Shashi Lata Jaiswal, Chandra Deo Jaiswal & Pranjal Jaiswal",
     contacts: [
       {
         name: "Pushkal Jaiswal",

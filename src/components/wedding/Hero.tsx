@@ -36,27 +36,32 @@ export function Hero() {
       {/* Smooth bottom parchment gradient guaranteeing seamless transition and text clarity */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[68vh] bg-gradient-to-t from-parchment via-parchment/95 via-45% to-transparent" />
 
+      {/* Shlok placed gracefully above the couple's head */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={opened ? { opacity: 1, y: 0 } : false}
+        transition={{ duration: 1, delay: 0.25 }}
+        className="relative z-20 w-full px-6 pt-8 text-center sm:pt-12"
+      >
+        <p className="font-serif text-sm tracking-[0.18em] text-pine font-semibold drop-shadow-[0_1px_4px_rgba(255,255,255,0.95)] sm:text-base">
+          {invite.shlok}
+        </p>
+      </motion.div>
+
       <motion.div
         style={{ y: textY }}
-        className="relative z-20 mt-auto w-full px-6 pt-24 pb-8 text-center"
+        className="relative z-20 mt-auto w-full px-6 pt-12 pb-8 text-center"
       >
-        <motion.p
-          initial={{ opacity: 0, y: 14 }}
-          animate={opened ? { opacity: 1, y: 0 } : false}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="font-serif text-sm tracking-[0.18em] text-pine font-medium drop-shadow-[0_1px_3px_rgba(255,255,255,0.9)] sm:text-base"
-        >
-          {invite.shlok}
-        </motion.p>
-
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={opened ? { opacity: 1, y: 0 } : false}
           transition={{ duration: 1, delay: 0.3 }}
-          className="mt-3 text-[0.72rem] font-semibold tracking-[0.32em] text-pine/90 uppercase drop-shadow-[0_1px_3px_rgba(255,255,255,0.9)] sm:text-xs"
+          className="flex flex-col items-center gap-0.5 text-[0.72rem] font-semibold tracking-[0.28em] text-pine/90 uppercase drop-shadow-[0_1px_3px_rgba(255,255,255,0.9)] sm:text-xs"
         >
-          {invite.kicker}
-        </motion.p>
+          <span>Mrs. Shashi Lata Jaiswal</span>
+          <span className="font-display text-sm lowercase italic text-gold font-normal">&amp;</span>
+          <span>Mr. Chandra Deo Jaiswal</span>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0 }}
@@ -74,8 +79,8 @@ export function Hero() {
           className="mx-auto mt-4 max-w-lg text-4xl leading-tight font-light text-pine uppercase sm:text-5xl"
         >
           {couple.groomShort}
-          <span className="mx-3 inline-block font-display text-2xl lowercase italic text-pine/70">
-            and
+          <span className="mx-2.5 inline-block font-serif text-3xl font-light text-gold drop-shadow-sm sm:text-4xl">
+            &amp;
           </span>
           {couple.brideShort}
         </motion.h1>

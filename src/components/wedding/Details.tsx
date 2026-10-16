@@ -21,7 +21,7 @@ export function Details() {
           <div className="pointer-events-none absolute inset-x-3 top-3 bottom-3 rounded-t-[8.4rem] border border-gold/30" />
 
           <p className="text-[0.65rem] font-medium tracking-[0.35em] text-ink/75 uppercase">
-            1st Wedding Anniversary Celebration
+            Venue &amp; Celebration
           </p>
           <p className="mt-4 font-display text-4xl tracking-[0.12em] text-gold">
             {event.dateLabel}
