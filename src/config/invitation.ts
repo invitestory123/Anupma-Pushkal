@@ -79,7 +79,12 @@ export const invitation = {
       {
         name: "Pushkal Jaiswal",
         phone: "+91 7272898912",
-        relation: "Groom",
+        relation: "",
+      },
+      {
+        name: "Pranjal Jaiswal",
+        phone: "+91 7272898913",
+        relation: "Brother",
       },
     ],
   },

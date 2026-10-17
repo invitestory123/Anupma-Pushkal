@@ -65,7 +65,10 @@ export function Venue() {
             {footer.contacts.map((c) => (
               <li key={c.phone} className="flex items-center justify-between gap-3">
                 <span className="text-sm font-medium text-pine">
-                  {c.name} <span className="text-xs text-ink/60 font-normal">({c.relation})</span>
+                  {c.name}
+                  {c.relation ? (
+                    <span className="text-xs text-ink/60 font-normal"> ({c.relation})</span>
+                  ) : null}
                 </span>
                 <a
                   href={`tel:${c.phone}`}
