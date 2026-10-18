@@ -97,7 +97,7 @@ export const invitation = {
     title: "Pushkal & Anupma — 1st Wedding Anniversary Celebration",
     description:
       "Mrs. Shashi Lata Jaiswal & Mr. Chandra Deo Jaiswal cordially invite you to celebrate the 1st Wedding Anniversary of Pushkal & Anupma at Sky Hilton Banquet and Restaurant, Lucknow.",
-    url: "https://maps.app.goo.gl/koSj9mkvguHVybNNA?g_st=ac",
+    url: "https://anupma-pushkal.inviteby.top/",
     image: "https://media.invitestory.in/sage-parchment/og-image.jpg",
     siteName: "Pushkal & Anupma 1st Wedding Anniversary",
   },
